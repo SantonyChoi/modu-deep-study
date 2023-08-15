@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   tensorflow:
     build:
@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - .:/app
+      - ./DeepLearningZeroToAll:/notebooks
     ports:
       - "8888:8888"
-    command: tail -f /dev/null
-
+    command: python /notebooks/lab-06-1-softmax_classifier.py
